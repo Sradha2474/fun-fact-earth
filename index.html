@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Fact Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Fact Generator</h1>
+        <button id="generateFact">Generate Fun Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const facts = [
+            "Earth is the third planet from the Sun.",
+            "Earth is the only known planet to support life.",
+            "Approximately 71% of Earth's surface is covered by water.",
+            "Earth has one natural satellite, the Moon.",
+            "The Earth's atmosphere is composed of 78% nitrogen and 21% oxygen.",
+            "Earth's rotation period is about 24 hours, which defines the length of a day.",
+            "The Earth's axis is tilted at an angle of 23.5 degrees, which causes the seasons.",
+            "Earth's core is composed primarily of iron and nickel.",
+            "The highest point on Earth is Mount Everest, which is 8,848 meters above sea level.",
+            "Earth's magnetic field protects the planet from solar wind and cosmic radiation."
+        ];
+
+        document.getElementById('generateFact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
